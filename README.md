@@ -1,5 +1,3 @@
-import schedule
-import time
 import random
 from telegram import Bot
 
@@ -23,9 +21,8 @@ def send_message():
     message = random.choice(messages)
     try:
         bot.send_message(chat_id=GROUP_ID, text=message)
-        print(f"✅ Message sent: {message}")
+        print("✅ فرستاده شد: " + message)
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print("❌ خطا: " + str(e))
 
-if name == "main":
-    send_message()
+send_message()
